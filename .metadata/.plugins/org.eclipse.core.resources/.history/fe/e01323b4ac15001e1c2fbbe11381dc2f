@@ -1,0 +1,57 @@
+package battingBall;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class BattingBallManager {
+	
+	private List<Player> pitcher = new ArrayList<>(); // 투수
+	private List<Player> hitter = new ArrayList<>(); // 타자
+	
+	void addPitcher(Scanner scan) { // 투수 등록
+		int power = (int)(Math.random()*10)+1;
+		int contact = (int)(Math.random()*10)+1;
+		pitcher.add(new Player("투수",power, contact));
+	}
+	void addHitter(Scanner scan) { // 타자 등록
+		int power = (int)(Math.random()*10)+1;
+		int contact = (int)(Math.random()*10)+1;
+		hitter.add(new Player("타자", power, contact));
+	}
+	void Course(Scanner scan) {
+		int pitcherCourse = (int)(Math.random()*5)+1;
+		pitcher.add(new Player(pitcherCourse));
+		System.out.println("코스 선택 >>");
+		System.out.println("1.왼쪽높은공  | 2.오른쪽높은공");
+		System.out.println("-------------------------");
+		System.out.println("3.왼쪽낮은공  | 4.오른쪽낮은공");
+		System.out.println("5.Ball");
+		int hitterCourse = scan.nextInt();
+		hitter.add(new Player(hitterCourse));
+	}
+	void printPhysical() {
+		System.out.println("타자 정보");
+		System.out.println("투수 정보");
+	}
+	
+	
+	
+	
+	public List<Player> getPitcher() {
+		return pitcher;
+	}
+	public void setPitcher(List<Player> pitcher) {
+		this.pitcher = pitcher;
+	}
+	public List<Player> getHitter() {
+		return hitter;
+	}
+	public void setHitter(List<Player> hitter) {
+		this.hitter = hitter;
+	}
+	
+	
+	
+	
+}

@@ -1,0 +1,30 @@
+package battingBall;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class BattingBallMain {
+	
+	public static void main(String[] args) {
+		// 배팅볼 야구게임
+		BattingBallManager bm = new BattingBallManager();
+		
+		Scanner scan = new Scanner(System.in);
+			System.out.println("______         _    _    _                ______         _  _   _____   ___  ___  ___ _____ \n"
+					+ "| ___ \\       | |  | |  (_)               | ___ \\       | || | |  __ \\ / _ \\ |  \\/  ||  ___|\n"
+					+ "| |_/ /  __ _ | |_ | |_  _  _ __    __ _  | |_/ /  __ _ | || | | |  \\// /_\\ \\| .  . || |__  \n"
+					+ "| ___ \\ / _` || __|| __|| || '_ \\  / _` | | ___ \\ / _` || || | | | __ |  _  || |\\/| ||  __| \n"
+					+ "| |_/ /| (_| || |_ | |_ | || | | || (_| | | |_/ /| (_| || || | | |_\\ \\| | | || |  | || |___ \n"
+					+ "\\____/  \\__,_| \\__| \\__||_||_| |_| \\__, | \\____/  \\__,_||_||_|  \\____/\\_| |_/\\_|  |_/\\____/ \n"
+					+ "                                    __/ |                                                   \n"
+					+ "                                   |___/                                                    ");
+			System.out.println("------Play GAME------");
+			System.out.println("[투수],[타자]등록");
+			bm.addPitcher();
+			bm.addHitter();
+			bm.printPhysical();
+			bm.play(scan);
+			
+	}
+
+}

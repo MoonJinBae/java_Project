@@ -1,0 +1,6 @@
+단어 ant => 쥐
+단어 bird => 새
+단어 cat => 고양이
+단어 dog => 강어지
+단어 mouse => 쥐
+단어 rabbit => 토끼
